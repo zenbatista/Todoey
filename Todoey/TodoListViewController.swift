@@ -8,7 +8,7 @@
 
 import UIKit
 
-let itemArray = ["Um","Dois","Tres"]
+var itemArray = ["Um","Dois","Tres"]
 
 class TodoListViewController: UITableViewController {
 
@@ -43,6 +43,35 @@ class TodoListViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    //Mark - Add New Items
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Adiciona tarefa nova", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Adiciona item", style: .default)  { (action) in
+            //What happens when user clicks on the Add Button
+       
+           itemArray.append(textField.text!)
+           self.tableView.reloadData()
+            
+            
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Cria algo novo"
+            textField = alertTextField
+      //      print(alertTextField.text)
+  
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
     
     
 }
