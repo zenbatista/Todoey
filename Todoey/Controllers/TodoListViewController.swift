@@ -28,7 +28,8 @@ class TodoListViewController: UITableViewController {
 //        print(dataFilePath)
         
         
-
+ 
+        
         loadItems()
         
 //        if let items = defaults.array(forKey: "TodoListArray") as? [Item] {
@@ -56,7 +57,11 @@ class TodoListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print(itemArray[indexPath.row])
+        
+        //     itemArray[indexPath.row].setValue("Completed", forKey: "title")
+        
+        //        context.delete(itemArray[indexPath.row])
+        //        itemArray.remove(at: indexPath.row)
         
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
         
@@ -117,8 +122,8 @@ class TodoListViewController: UITableViewController {
         
     }
     
-    func loadItems() {
-        let request : NSFetchRequest<Item> = Item.fetchRequest()
+    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest()) {
+        
         
         do {
           itemArray = try context.fetch(request)
@@ -128,6 +133,21 @@ class TodoListViewController: UITableViewController {
         }
     }
     
+
     
+}
+
+//Mark - Search Bar Methods
+
+extension TodoListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        
+        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
     
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+    
+        loadItems(with: request)
+        
+    }
 }
