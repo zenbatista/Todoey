@@ -47,8 +47,9 @@ class CategoryViewController: UITableViewController {
         } catch {
             print("Error saving category \(error)")
             
-            tableView.reloadData()
+            
         }
+        tableView.reloadData()
     }
     
     func loadCategories() {
