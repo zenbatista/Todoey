@@ -15,6 +15,7 @@
 		E702E1D61FFB46B500A4800A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E702E1D41FFB46B500A4800A /* LaunchScreen.storyboard */; };
 		E77AA0452014684D006DAF3F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E77AA0432014684D006DAF3F /* DataModel.xcdatamodeld */; };
 		E77AA0472015435D006DAF3F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77AA0462015435D006DAF3F /* CategoryViewController.swift */; };
+		E77AA049201712B3006DAF3F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77AA048201712B3006DAF3F /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E702E1D71FFB46B500A4800A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E77AA0442014684D006DAF3F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		E77AA0462015435D006DAF3F /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		E77AA048201712B3006DAF3F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				E72759D32014359C006FAE91 /* Data Model */,
 				E702E1CB1FFB46B500A4800A /* AppDelegate.swift */,
+				E77AA048201712B3006DAF3F /* Data.swift */,
 				E72759D4201435C1006FAE91 /* Controllers */,
 				E72759D5201435D1006FAE91 /* Views */,
 				E702E1CF1FFB46B500A4800A /* Main.storyboard */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77AA0472015435D006DAF3F /* CategoryViewController.swift in Sources */,
+				E77AA049201712B3006DAF3F /* Data.swift in Sources */,
 				E702E1CE1FFB46B500A4800A /* TodoListViewController.swift in Sources */,
 				E77AA0452014684D006DAF3F /* DataModel.xcdatamodeld in Sources */,
 				E702E1CC1FFB46B500A4800A /* AppDelegate.swift in Sources */,
